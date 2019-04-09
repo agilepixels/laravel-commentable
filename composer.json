@@ -1,0 +1,32 @@
+{
+    "name": "agilepixels/laravel-commentable",
+    "description": "A package to add comments to Eloquent Models",
+    "keywords": [
+        "agilepixels",
+        "laravel-commentable"
+    ],
+    "homepage": "https://github.com/agilepixels/laravel-commentable",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lex de Willigen",
+            "email": "lex@agilepixels.com",
+            "homepage": "https://agilepixels.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "AgilePixels\\Commentable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AgilePixels\\Commentable\\CommentableServiceProvider"
+            ]
+        }
+    }
+}
