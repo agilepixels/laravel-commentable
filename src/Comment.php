@@ -9,6 +9,13 @@ class Comment extends Model
 {
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['body'];
+
+    /**
      * The model that can be commented
      *
      * @return MorphTo
