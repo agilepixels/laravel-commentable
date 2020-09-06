@@ -19,8 +19,6 @@ class CommentableServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/commentable.php' => config_path('commentable.php'),
         ], 'config');
-
-        $this->guardAgainstInvalidCommentModel();
     }
 
     /**
@@ -29,19 +27,5 @@ class CommentableServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/commentable.php', 'commentable');
-    }
-
-    /**
-     * Make sure the given Comment model extends AgilePixels\Commentable\Comment
-     *
-     * @throws InvalidCommentModel
-     */
-    public function guardAgainstInvalidCommentModel()
-    {
-        $modelClassName = $this->app->config['commentable.model'];
-
-        if (! is_a($modelClassName, Comment::class, true)) {
-            throw InvalidCommentModel::create($modelClassName);
-        }
     }
 }
