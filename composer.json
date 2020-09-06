@@ -28,5 +28,8 @@
                 "AgilePixels\\Commentable\\CommentableServiceProvider"
             ]
         }
+    },
+    "require": {
+        "laravel/framework": "^7.0"
     }
 }

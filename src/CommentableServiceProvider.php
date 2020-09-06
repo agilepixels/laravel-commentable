@@ -38,7 +38,7 @@ class CommentableServiceProvider extends ServiceProvider
      */
     public function guardAgainstInvalidCommentModel()
     {
-        $modelClassName = config('commentable.model');
+        $modelClassName = $this->app->config['commentable.model'];
 
         if (! is_a($modelClassName, Comment::class, true)) {
             throw InvalidCommentModel::create($modelClassName);
