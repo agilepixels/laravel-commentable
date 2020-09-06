@@ -2,15 +2,12 @@
 
 namespace AgilePixels\Commentable;
 
-use AgilePixels\Commentable\Exceptions\InvalidCommentModel;
 use Illuminate\Support\ServiceProvider;
 
 class CommentableServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
-     *
-     * @throws InvalidCommentModel
      */
     public function boot()
     {
